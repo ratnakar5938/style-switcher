@@ -1,0 +1,26 @@
+.upper {
+  min-height: 50vh;
+  background-color: aqua;
+  display: flex;
+}
+
+.div-img {
+  height: 300px;
+  display: block;
+  margin: auto;
+  /* border: 2px solid red; */
+  border-radius: 20px;
+}
+
+.text {
+  font-size: large;
+  font-family: cursive;
+  font-weight: bold;
+  display: block;
+  margin: auto;
+}
+
+.lower {
+  min-height: 50vh;
+  background-color: blue;
+}
