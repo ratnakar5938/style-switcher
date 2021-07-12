@@ -6,23 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Style switcher</title>
+    <!-- tailwind style sheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- initial bg color -->
+    <link rel="stylesheet" type="text/css" href="skins/color-1.css">
+    <!-- color switcher -->
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-1" href="skins/color-1.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-2" href="skins/color-2.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-3" href="skins/color-3.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-4" href="skins/color-4.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-style" title="color-5" href="skins/color-5.css" disabled>
 </head>
 
 <body>
-    <div class="upper">
-        <img class="div-img" src="bg1.jpg" alt="">
-        <span class="text">This is a sample text</span>
-    </div>
-    <div class="lower">
-        <div>
-            <div class="color-switch"></div>
-            <div class="color-switch"></div>
-            <div class="color-switch"></div>
-            <div class="color-switch"></div>
-            <div class="color-switch"></div>
+    <div class="display-section bg-color flex" style="min-height: 50vh;">
+        <img class="h-80 m-auto rounded-2xl" src="bg1.jpg" alt="">
+        <div class="text m-auto border-2 border-black p-4 rounded-lg">
+            <span class="inner-text text-xl font-semibold">This is a sample text</span>
         </div>
     </div>
+
+    <div class="control-section bg-gray-100 flex justify-center items-center" style="min-height: 50vh;">
+        <div class="color flex justify-center border-2 border-black h-20 items-center rounded-xl">
+            <div
+                class="color-1 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-red-500 hover:bg-red-400" onclick="setActiveStyle('color-1')">
+            </div>
+            <div
+                class="color-2 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-yellow-500 hover:bg-yellow-400" onclick="setActiveStyle('color-2')">
+            </div>
+            <div
+                class="color-3 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-blue-500 hover:bg-blue-400 active" onclick="setActiveStyle('color-3')">
+            </div>
+            <div
+                class="color-4 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-green-500 hover:bg-green-400" onclick="setActiveStyle('color-4')">
+            </div>
+            <div
+                class="color-5 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-pink-500 hover:bg-pink-400" onclick="setActiveStyle('color-5')">
+            </div>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 
 </html>
