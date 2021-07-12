@@ -22771,6 +22771,10 @@ video {
   font-style: normal;
 }
 
+.text-style {
+  text-transform: var(--text-style);
+}
+
 .ordinal, .slashed-zero, .lining-nums, .oldstyle-nums, .proportional-nums, .tabular-nums, .diagonal-fractions, .stacked-fractions {
   --tw-ordinal: var(--tw-empty,/*!*/ /*!*/);
   --tw-slashed-zero: var(--tw-empty,/*!*/ /*!*/);

@@ -16,32 +16,49 @@
     <link rel="stylesheet" type="text/css" class="alternate-style" title="color-3" href="skins/color-3.css" disabled>
     <link rel="stylesheet" type="text/css" class="alternate-style" title="color-4" href="skins/color-4.css" disabled>
     <link rel="stylesheet" type="text/css" class="alternate-style" title="color-5" href="skins/color-5.css" disabled>
+
+    <!-- initial text style -->
+    <link rel="stylesheet" type="text/css" href="text-styles/text-1.css">
+    <!-- text style switcher -->
+    <link rel="stylesheet" type="text/css" class="alternate-text-style" title="text-1" href="text-styles/text-1.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-text-style" title="text-2" href="text-styles/text-2.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-text-style" title="text-3" href="text-styles/text-3.css" disabled>
 </head>
 
 <body>
     <div class="display-section bg-color flex" style="min-height: 50vh;">
         <img class="h-80 m-auto rounded-2xl" src="bg1.jpg" alt="">
         <div class="text m-auto border-2 border-black p-4 rounded-lg">
-            <span class="inner-text text-xl font-semibold">This is a sample text</span>
+            <span class="inner-text text-xl font-semibold text-style">This is a sample text</span>
         </div>
     </div>
 
-    <div class="control-section bg-gray-100 flex justify-center items-center" style="min-height: 50vh;">
-        <div class="color flex justify-center border-2 border-black h-20 items-center rounded-xl">
-            <div
-                class="color-1 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-red-500 hover:bg-red-400" onclick="setActiveStyle('color-1')">
+    <div class="control-section bg-gray-100 justify-center items-center" style="min-height: 50vh;">
+        <div class="flex justify-center items-center mt-4">
+            <div class="color flex justify-center border-2 border-black h-20 items-center rounded-xl">
+                <div class="color-1 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-red-500 hover:bg-red-400"
+                    onclick="setActiveStyle('color-1')">
+                </div>
+                <div class="color-2 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-yellow-500 hover:bg-yellow-400"
+                    onclick="setActiveStyle('color-2')">
+                </div>
+                <div class="color-3 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-blue-500 hover:bg-blue-400 active"
+                    onclick="setActiveStyle('color-3')">
+                </div>
+                <div class="color-4 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-green-500 hover:bg-green-400"
+                    onclick="setActiveStyle('color-4')">
+                </div>
+                <div class="color-5 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-pink-500 hover:bg-pink-400"
+                    onclick="setActiveStyle('color-5')">
+                </div>
             </div>
-            <div
-                class="color-2 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-yellow-500 hover:bg-yellow-400" onclick="setActiveStyle('color-2')">
-            </div>
-            <div
-                class="color-3 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-blue-500 hover:bg-blue-400 active" onclick="setActiveStyle('color-3')">
-            </div>
-            <div
-                class="color-4 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-green-500 hover:bg-green-400" onclick="setActiveStyle('color-4')">
-            </div>
-            <div
-                class="color-5 h-10 w-10 rounded-full border-black border-2 m-4 cursor-pointer bg-pink-500 hover:bg-pink-400" onclick="setActiveStyle('color-5')">
+        </div>
+
+        <div class="flex justify-center items-center mt-4">
+            <div class="text-style flex justify-center border-2 border-black h-20 items-center rounded-xl">
+                <div class="text-1 capitalize border-black border-2 m-4 cursor-pointer p-2 rounded-xl hover:shadow-inner" onclick="setTextStyle('text-1')">capitalise</div>
+                <div class="text-2 uppercase border-black border-2 m-4 cursor-pointer p-2 rounded-xl hover:shadow-inner" onclick="setTextStyle('text-2')">uppercase</div>
+                <div class="text-3 lowercase border-black border-2 m-4 cursor-pointer p-2 rounded-xl hover:shadow-inner" onclick="setTextStyle('text-3')">lowercase</div>
             </div>
         </div>
     </div>
