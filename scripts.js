@@ -39,3 +39,14 @@ function changeTextStyle() {
         }
     })
 }
+
+function appendText() {
+    const span = document.createElement("span");
+    let val = document.forms['myForm']['text-append'].value;
+    const node = document.createTextNode(val);
+    span.appendChild(node);
+
+    const element = document.getElementById("div1");
+    element.appendChild(span);
+}
+
