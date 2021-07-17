@@ -12484,6 +12484,10 @@ video {
   word-break: break-all;
 }
 
+.img-style{
+  border-radius: var(--image-style);
+}
+
 .rounded-none {
   border-radius: 0px;
 }

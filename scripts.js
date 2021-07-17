@@ -24,20 +24,24 @@ if (localStorage.getItem("color") !== null) {
 const alternateTextStyles = document.querySelectorAll(".alternate-text-style");
 
 function setTextStyle(style) {
-    localStorage.setItem("style", style);
+    localStorage.setItem("text-style", style);
     changeTextStyle();
 
 }
 
 function changeTextStyle() {
     alternateTextStyles.forEach((style) => {
-        if (localStorage.getItem("style") === style.getAttribute("title")) {
+        if (localStorage.getItem("text-style") === style.getAttribute("title")) {
             style.removeAttribute("disabled");
         }
         else {
             style.setAttribute("disabled", "true");
         }
     })
+}
+
+if (localStorage.getItem("text-style") !== null) {
+    changeTextStyle();
 }
 
 function appendText() {
@@ -50,3 +54,25 @@ function appendText() {
     element.appendChild(span);
 }
 
+const alternateImageStyles = document.querySelectorAll(".alternate-image-style");
+
+function setImageStyle(style) {
+    localStorage.setItem("img-style", style);
+    changeImageStyle();
+
+}
+
+function changeImageStyle() {
+    alternateImageStyles.forEach((style) => {
+        if (localStorage.getItem("img-style") === style.getAttribute("title")) {
+            style.removeAttribute("disabled");
+        }
+        else {
+            style.setAttribute("disabled", "true");
+        }
+    })
+}
+
+if (localStorage.getItem("img-style") !== null) {
+    changeImageStyle();
+}

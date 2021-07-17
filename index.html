@@ -26,11 +26,21 @@
         disabled>
     <link rel="stylesheet" type="text/css" class="alternate-text-style" title="text-3" href="text-styles/text-3.css"
         disabled>
+
+    <!-- initial image style -->
+    <link rel="stylesheet" type="text/css" href="img-style/img-style-2.css">
+    <!-- image style switcher -->
+    <link rel="stylesheet" type="text/css" class="alternate-image-style" title="image-1"
+        href="img-style/img-style-1.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-image-style" title="image-2"
+        href="img-style/img-style-2.css" disabled>
+    <link rel="stylesheet" type="text/css" class="alternate-image-style" title="image-3"
+        href="img-style/img-style-3.css" disabled>
 </head>
 
 <body>
     <div class="display-section bg-color md:flex" style="min-height: 50vh;">
-        <img class="h-80 m-auto rounded-2xl" src="bg1.jpg" alt="">
+        <img class="h-80 m-auto img-style" src="bg1.jpg" alt="">
         <div id="div1"
             class="text m-auto border-2 border-black p-4 rounded-lg flex md:block justify-center items-center mt-3 md:mt-auto text-style">
             <span class="inner-text text-xl font-semibold text-style">This is a sample text</span>
@@ -72,14 +82,26 @@
         <div class="flex justify-center items-center mt-4">
             <form action="" name="myForm">
                 <div class="text-style flex justify-center border-2 border-black h-20 items-center rounded-xl">
-                    <label for="" class="m-4">Text</label>
+                    <label for="" class="m-4 capitalize">Text</label>
                     <input type="text" placeholder="Add text here" name="text-append" class="mr-4" required>
                     <button type="button"
-                        class="p-2 pl-4 pr-4 rounded-full bg-blue-600 text-white mr-4 hover:bg-blue-500"
+                        class="p-2 pl-4 pr-4 rounded-full bg-blue-600 text-white mr-4 hover:bg-blue-500 capitalize"
                         onclick="appendText()">Append</button>
+                </div>
             </form>
         </div>
-    </div>
+        <div class="block">
+            <div class="flex justify-center items-center mt-4">
+                <div class="text-style flex justify-center border-2 border-black h-20 items-center rounded-xl">
+                    <div class="image-1 border-black border-2 m-4 cursor-pointer p-2 rounded-xl hover:shadow-inner lowercase"
+                        onclick="setImageStyle('image-1')">border-sm</div>
+                    <div class="image-2 border-black border-2 m-4 cursor-pointer p-2 rounded-xl hover:shadow-inner lowercase"
+                        onclick="setImageStyle('image-2')">border-xl</div>
+                    <div class="image-3 border-black border-2 m-4 cursor-pointer p-2 rounded-xl hover:shadow-inner lowercase"
+                        onclick="setImageStyle('image-3')">border-full</div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="scripts.js"></script>
 </body>
